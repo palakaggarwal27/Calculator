@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="images\favicon-16x16.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.0/lib/browser/math.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Welcome to the Calculator</h1>
+    
+    <div id="calculator">
+        <!-- Calculator UI will be rendered here -->
+        <div id="result">
+            <p class="exp">     </p>
+            <button onclick="backspace()"><img src="images\tag_15988606.png" alt="clear"></button>
+            
+        </div>
+        <div id="buttons">
+            <button class="special" onclick="clearExpression()">AC</button>
+            <button class="special" onclick="appendToExpression('%')">%</button>
+            <button class="special" onclick="appendToExpression('(')">(</button>
+            <button class="special" onclick="appendToExpression(')')">)</button>
+            <button class="normal" onclick="appendToExpression('1')">1</button>
+            <button class="normal" onclick="appendToExpression('2')">2</button>
+            <button class="normal" onclick="appendToExpression('3')">3</button>
+            <button class="special" onclick="appendToExpression('/')">/</button>
+            <button class="normal" onclick="appendToExpression('4')">4</button>
+            <button class="normal" onclick="appendToExpression('5')">5</button>
+            <button class="normal" onclick="appendToExpression('6')">6</button>
+            <button class="special" onclick="appendToExpression('*')">*</button>
+            <button class="normal" onclick="appendToExpression('7')">7</button>
+            <button class="normal" onclick="appendToExpression('8')">8</button>
+            <button class="normal" onclick="appendToExpression('9')">9</button>
+            <button class="special" onclick="appendToExpression('+')">+</button>
+            <button class="normal" onclick="appendToExpression('0')">0</button>
+            <button class="normal" onclick="appendToExpression('.')">.</button>
+            <button class="equal" onclick="calculateResult()">=</button>
+            <button class="special" onclick="appendToExpression('-')">-</button>
+            
+           
+            
+            
+            
+            
+            
+    </div>
+    <!-- <a target="_blank" href="https://icons8.com/icon/w8uA2lyOFNbd/calculator">Calculator</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
+    
+    
+</body>
+</html>

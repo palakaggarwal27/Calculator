@@ -14,7 +14,7 @@ A simple calculator built with HTML, CSS, and JavaScript. Supports basic arithme
 3. Results are displayed instantly
 
 ## Preview
-You can see a live preview of the project here: [GitHub Pages Link](https://palakaggarwal27.github.io/calculator/)
+You can see a live preview of the project here: [GitHub Pages Link](https://github.com/palakaggarwal27/Calculator/tree/main)
 
 ## Technologies Used
 - HTML

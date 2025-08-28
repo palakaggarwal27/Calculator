@@ -4,20 +4,24 @@ let expression = "";
 
 function appendToExpression(value) {
     // Append the value to the expression
-    let cond=['+','-','*','/','.',')','('].includes(value);
+     let cond1=['+','-','*','/','.',')','('].includes(value);
+    let cond2=['+','-','*','/','.'].includes(expression[expression.length-1]);
     const len=document.querySelector('.exp').offsetWidth;
-    if  (len<360 &&  (expression[expression.length-1] !=value || !cond)) {
+    if (expression[expression.length-1] !=value || !cond1) {
 
         if (expression.length === 0 && (value === '+' || value === '.' || value === '*' || value === '/' || value === ')')) {
             // Prevent starting with an operator
             return;}
+        
+        if (cond2 && (value === '+' || value === '.' || value === '*' || value === '/' || value === ')'))
+        {return;}
 
         expression += value;
         document.querySelector('.exp').textContent = expression;
+        const newlen=document.querySelector('.exp').offsetWidth;
+        const expdiv=document.querySelector('.exp');
+        expdiv.scrollLeft=expdiv.scrollWidth;
         
-        if (expression.length > 20) {
-            document.querySelector('.exp').style.fontSize = "1.5rem"; // Adjust font size for long expressions
-        }
     }
 }
 

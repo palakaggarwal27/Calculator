@@ -42,30 +42,38 @@ h1{
 
 #result{
     margin: 0;
-    padding:0;
-    height:12vh;
+    padding:0.5rem;
+    height:14.5vh;
     width:100%;
     display:flex;
-    flex-direction: row;
     justify-content: flex-end;
+    gap:2em;
     align-items: center;
     position:relative;
+    white-space: nowrap;
+    overflow-x:scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
 
     
 }
 
+
+
 #result button{
     display:block;
-    position:absolute;
+    position:relative;
     border:0;
     margin:0;
     top:0;
-    right:0.3%;
+    right:0;
+    float:right;
     padding: 0;
     width:12vh;
-    height:100%;
+    height:12vh;
     font-size: 20px;
     overflow:hidden;
+    border-radius:50%;
     
 }
 
@@ -74,17 +82,34 @@ h1{
     height: 100%;
     border-radius: 50%;
     background-color:white;
-    float:center;
-    object-fit: cover;
     
 }
 
 #result .exp{
-    display:block;
+    flex:1;
+    padding:0;
+    margin:0;
+    text-align:right;
+    position:relative;
+    height:10vh;
     font-size: 2em;
+    top:20%;
+    right:-10%;
     color: rgba(4, 20, 26, 0.6);
     margin-right: 20px;
+    float:right;
+    overflow-x: auto;
+    white-space: nowrap;
+    text-align: right;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
+
+#result .exp::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+
 #buttons{
     margin: 0 ;
     padding:2.5rem;
